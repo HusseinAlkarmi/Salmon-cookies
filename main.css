@@ -1,0 +1,27 @@
+header{
+    background-color: gold;
+}
+
+h1:nth-of-type(1){
+    text-align: center;
+    color: black;
+    margin: 0px;
+    padding-top: 30px;
+    font-size: 50px;
+}
+
+div:nth-of-type(1)>ul>li{
+    display: inline-block;
+    padding-right: 10px;
+    font-size: 20px;
+}
+
+div:nth-of-type(1){
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 15px;
+}
+
+a{
+    color:black;
+}

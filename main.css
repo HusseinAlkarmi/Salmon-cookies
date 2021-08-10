@@ -1,5 +1,6 @@
 header{
-    background-color: gold;
+    background-color: brown;
+
 }
 
 h1:nth-of-type(1){
@@ -24,4 +25,24 @@ div:nth-of-type(1){
 
 a{
     color:black;
+}
+
+
+
+nav img{
+    display: inline;
+    width: 250px;
+    padding: 8%;
+}
+
+body{
+    background-color: lightblue;
+}
+
+footer{
+    text-align: center;
+    font-size: 20px;
+    background-color: brown;
+    height: 70px;
+    padding-top: 35px;
 }

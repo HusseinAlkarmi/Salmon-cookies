@@ -1,17 +1,28 @@
 table,
 th,
 td {
-  border: 1px solid blue;
+  border: 2px solid black;
 }
 
 div{
   padding-left: 25%;
 }
 
-h1{
+nav{
+ font-size: 20px;
+  padding-left: 45%;
+}
+header{
   text-align: center;
+  font-size: 35px;
+  font-weight: bold;
 }
 
 body{
-  background-color:orange;
+  background-color:lightblue;
+}
+
+li{
+  padding-top: 10px;
+  padding-left: 22px;
 }

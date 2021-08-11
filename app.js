@@ -8,6 +8,7 @@ let container = document.getElementById('container');
 let tableEl = document.createElement('table');
 container.appendChild(tableEl);
 
+
   function Store (location, minC, maxC, avgCookie){
   this.location = location;
   this.minC = minC;
@@ -29,6 +30,7 @@ Store.prototype.getcustPerHour= function(){
     
   };
 
+  
 
   Store.prototype.getavgCookiePerH= function(){
     for (let i=0; i<time.length; i++){
@@ -53,7 +55,20 @@ Store.prototype.getcustPerHour= function(){
      tdEl5.textContent = this.total; 
 }
        
-   
+let myform = document.getElementById('myForm');
+myform.addEventListener('submit', addStore);
+function addStore(event) {
+
+    event.preventDefault();
+    let storeName = event.target.storeName.value;
+    let minCustomer = event.target.minCustomer.value;
+    let maxCustomer = event.target.maxCustomer.value;
+    let avgCookie = event.target.avgCookie.value;
+    let newStore = new Store(storeName , minCustomer, maxCustomer , avgCookie);
+    newStore.getcustomerNumber();
+    newStore.getsales();
+    newStore.render();
+}
     
     function createTableHeader() {
         let trEl = document.createElement('tr');
@@ -133,4 +148,9 @@ Store.prototype.getcustPerHour= function(){
     s5.getcustPerHour();
     s5.getavgCookiePerH();
     s5.render()
-    createTableFooter();
+    
+   
+
+    
+
+        createTableFooter();

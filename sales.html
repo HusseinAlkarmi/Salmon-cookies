@@ -14,18 +14,24 @@
 
     <main>
 
+
+        <div id="container"></div>
+
+
+
+
         <form action = "" id = "myForm">
 
         <fieldset>
             <legend>salmon cookies </legend>
-            <label for="storeName">store Name</label>
-            <input type="text" name="storeName" id ="storeName" required minlength="4" maxlength="7"/>
+            <label for="location">store Name</label>
+            <input type="text" name="location" id ="location" required minlength="2" maxlength="20"/>
             <br /><br />
-            <label for="minCustomer">minimum order</label>
-            <input type="number" name="minCustomer" id="minCustomer"  required value="1" min="1" max="200" />
+            <label for="minC">minimum order</label>
+            <input type="number" name="minC" id="minC"  required value="1" min="1" max="500" />
             <br /><br />
-            <label for="maxCustomer">maximum order</label>
-            <input type="number" name="maxCustomer" id="maxCustomer" required  value="1" min="1" max="200" />
+            <label for="maxC">maximum order</label>
+            <input type="number" name="maxC" id="maxC" required  value="1" min="1" max="500" />
             <br /><br />
             <label for="avgCookie">avgCookie</label>
             <input type="text" name="avgCookie" id="avgCookie" required/>
@@ -35,7 +41,7 @@
         </form>
     </fieldset>
 
-        <div id="container"></div>
+        
         
     </main>
 

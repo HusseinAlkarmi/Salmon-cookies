@@ -55,20 +55,7 @@ Store.prototype.getcustPerHour= function(){
      tdEl5.textContent = this.total; 
 }
        
-let myform = document.getElementById('myForm');
-myform.addEventListener('submit', addStore);
-function addStore(event) {
 
-    event.preventDefault();
-    let storeName = event.target.storeName.value;
-    let minCustomer = event.target.minCustomer.value;
-    let maxCustomer = event.target.maxCustomer.value;
-    let avgCookie = event.target.avgCookie.value;
-    let newStore = new Store(storeName , minCustomer, maxCustomer , avgCookie);
-    newStore.getcustomerNumber();
-    newStore.getsales();
-    newStore.render();
-}
     
     function createTableHeader() {
         let trEl = document.createElement('tr');
@@ -92,6 +79,30 @@ function addStore(event) {
         thEl10.textContent = 'Daily Store Total';
     }
      
+
+    let myform = document.getElementById('myForm');
+    myform.addEventListener('submit', addStore);
+    function addStore(event) {
+    
+        event.preventDefault();
+        let location = event.target.location.value;
+        let minC = event.target.minC.value;
+        let maxC = event.target.maxC.value;
+        let avgCookie = event.target.avgCookie.value;
+        let newStore = new Store (location, minC, maxC, avgCookie);
+        
+
+        let table = tableEl.rows.length-1;
+            tableEl.deleteRow(table);
+
+        newStore.getcustPerHour();
+        newStore.getavgCookiePerH();
+        newStore.render();
+
+        createTableFooter();
+
+        }
+
     createTableHeader();
      
     function createTableFooter(){
@@ -150,7 +161,7 @@ function addStore(event) {
     s5.render()
     
    
-
+    
     
 
         createTableFooter();

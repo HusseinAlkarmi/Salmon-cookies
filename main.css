@@ -1,14 +1,16 @@
 header{
-    background-color: brown;
-
+   
 }
+
+
 
 h1:nth-of-type(1){
     text-align: center;
-    color: black;
+    color: white;
     margin: 0px;
     padding-top: 30px;
     font-size: 50px;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
 div:nth-of-type(1)>ul>li{
@@ -24,7 +26,11 @@ div:nth-of-type(1){
 }
 
 a{
-    color:black;
+    color:white;
+    font-family:sans-serif;
+    text-decoration: none;
+    border: solid ;
+    padding: 10px;
 }
 
 
@@ -36,13 +42,17 @@ nav img{
 }
 
 body{
-    background-color: lightblue;
+    background-image: url(https://cdn.wallpapersafari.com/91/84/eEilDA.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
 }
 
 footer{
     text-align: center;
     font-size: 20px;
-    background-color: brown;
+    /* background-color: brown; */
     height: 70px;
     padding-top: 35px;
+    color: white;
 }
